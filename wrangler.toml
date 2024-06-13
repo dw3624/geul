@@ -1,0 +1,23 @@
+name = "geul"
+compatibility_date = "2024-04-01"
+compatibility_flags = [ "nodejs_compat" ]
+pages_build_output_dir = "./dist"
+
+# [vars]
+# MY_VAR = "my-variable"
+
+# [[kv_namespaces]]
+# binding = "MY_KV_NAMESPACE"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# [[r2_buckets]]
+# binding = "MY_BUCKET"
+# bucket_name = "my-bucket"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "geul"
+database_id = "31f58f6c-5c94-46f0-974e-8a7ff8f13a55"
+
+# [ai]
+# binding = "AI"
