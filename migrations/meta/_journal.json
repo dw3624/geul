@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1718347897127,
+      "tag": "0000_soft_namor",
+      "breakpoints": true
+    }
+  ]
+}
