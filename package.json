@@ -17,7 +17,10 @@
     "@cloudflare/workers-types": "^4.20240529.0",
     "@hono/vite-cloudflare-pages": "^0.4.0",
     "@hono/vite-dev-server": "^0.12.1",
+    "autoprefixer": "^10.4.19",
     "drizzle-kit": "^0.22.7",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
     "vite": "^5.2.12",
     "wrangler": "^3.57.2"
   }
