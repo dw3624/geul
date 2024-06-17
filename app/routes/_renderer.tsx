@@ -1,6 +1,7 @@
 import { Style } from 'hono/css';
 import { jsxRenderer } from 'hono/jsx-renderer';
 import { Link, Script } from 'honox/server';
+import { Layout } from '../components/base/layout';
 
 export default jsxRenderer(({ children, title }) => {
   return (
@@ -14,7 +15,9 @@ export default jsxRenderer(({ children, title }) => {
         <Link href="/app/style.css" rel="stylesheet" />
         <Style />
       </head>
-      <body>{children}</body>
+      <body>
+        <Layout>{children}</Layout>
+      </body>
     </html>
   );
 });
