@@ -4,7 +4,7 @@ export const Header = () => {
   return (
     <header>
       <div class="flex items-center justify-between h-14 px-4">
-        <div class="font-bold font-serif">
+        <div class="font-bold font-serif text-lg">
           書<span class="text-sm ml-2">[글 서]</span>
         </div>
       </div>

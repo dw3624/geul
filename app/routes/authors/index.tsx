@@ -11,9 +11,8 @@ export default createRoute(async (c) => {
         {initial ? initial : '전체'}
       </h1>
       <article class="py-6 mt-12">
-        <div class="flex items-center justify-between text-sm text-muted-foreground">
-          <span>작가</span>
-          <span>작품 수</span>
+        <div class="flex items-center justify-end text-sm text-muted-foreground">
+          <span>저서</span>
         </div>
         <div class="flex flex-col gap-6 mt-4">
           {data.map((item) => (

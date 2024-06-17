@@ -43,9 +43,11 @@ export default createRoute(async (c) => {
               {desc.contents.map(
                 (content) =>
                   content.value && (
-                    <div key={content.label} className="flex">
-                      <div className="w-[120px] mr-2">{content.label}</div>
-                      <div className="col-span-auto">{content.value}</div>
+                    <div key={content.label} className="grid grid-cols-3 gap-2">
+                      <div className="col-span-1">{content.label}</div>
+                      <div className="col-span-2 break-words">
+                        {content.value}
+                      </div>
                     </div>
                   )
               )}

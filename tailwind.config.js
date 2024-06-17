@@ -13,7 +13,7 @@ export default {
     extend: {
       fontFamily: {
         sans: 'Noto Sans KR Variable',
-        serif: 'Noto Serif KR',
+        serif: 'Noto Serif KR Variable',
       },
       colors: {
         border: 'hsl(var(--border))',

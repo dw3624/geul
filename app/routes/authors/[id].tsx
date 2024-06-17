@@ -19,13 +19,13 @@ export default createRoute(async (c) => {
         <div>
           <h2 class="font-semibold">| 기본 정보 |</h2>
           <div class="flex flex-col gap-2 mt-4">
-            <div class="flex">
-              <div class="w-[120px] mr-2">출생</div>
-              <div class="col-span-auto">{author.birth}</div>
+            <div class="grid grid-cols-3 gap-2">
+              <div class="col-span-1">출생</div>
+              <div class="col-span-2">{author.birth}</div>
             </div>
-            <div class="flex">
-              <div class="w-[120px] mr-2">사망</div>
-              <div>{author.death}</div>
+            <div class="grid grid-cols-3 gap-2">
+              <div class="col-span-1">사망</div>
+              <div class="col-span-2">{author.death}</div>
             </div>
           </div>
         </div>
