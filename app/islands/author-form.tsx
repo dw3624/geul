@@ -6,15 +6,15 @@ export const AuthorForm = () => {
         <form method="POST" action="/api/authors">
           <div>
             <label htmlFor="name">이름</label>
-            <input id="name" type="text" name="name" />
+            <input id="name" type="text" name="name" class="border" />
           </div>
           <div>
             <label htmlFor="birth">출생</label>
-            <input id="birth" type="date" name="birth" />
+            <input id="birth" type="date" name="birth" class="border" />
           </div>
           <div>
             <label htmlFor="death">사망</label>
-            <input id="death" type="date" name="death" />
+            <input id="death" type="date" name="death" class="border" />
           </div>
           <input type="submit" />
         </form>

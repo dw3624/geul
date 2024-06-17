@@ -3,7 +3,7 @@ import { integer, text, sqliteTable, index } from 'drizzle-orm/sqlite-core';
 
 export const author = sqliteTable('author', {
   id: integer('id', { mode: 'number' }).primaryKey({ autoIncrement: true }),
-  name: text('name'),
+  name: text('name').default('작자 미상'),
   initial: text('initial'),
   birth: text('birth'),
   death: text('death'),

@@ -52,6 +52,7 @@ export const createBookContent = async (
       contentType: 'text/markdown',
     },
   });
+  console.log(result.key);
   return result.key;
 };
 

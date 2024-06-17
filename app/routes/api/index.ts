@@ -96,6 +96,7 @@ app.post('/books', zValidator('form', bookSchema), async (c) => {
   const authorPath = validated.author.replaceAll(' ', '');
   const titlePath = validated.title.replaceAll(' ', '');
   const path = `${authorPath}_${titlePath}`;
+  console.log(path);
   await createBookContent(c.env.R2, path, validated.content);
   return c.redirect('/');
 });
