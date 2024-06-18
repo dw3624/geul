@@ -99,3 +99,18 @@ export const findContent = async (r2: R2Bucket, path: string) => {
   const content = await object.text();
   return content;
 };
+
+export const updateBookById = async (d1: D1Database, id: number) => {
+  const db = drizzle(d1);
+  const currentBook = await db
+    .select({ views: book.views })
+    .from(book)
+    .where(eq(book.id, +id));
+  const newViews = currentBook[0].views + 1;
+  const result = await db
+    .update(book)
+    .set({ views: newViews })
+    .where(eq(book.id, +id))
+    .returning({ views: book.views });
+  return result[0];
+};
