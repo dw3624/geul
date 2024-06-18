@@ -7,7 +7,12 @@ import { defineConfig } from 'vite';
 export default defineConfig(({ mode }) => {
   if (mode === 'client') {
     return {
-      plugins: [client()],
+      plugins: [
+        client(),
+        honox({
+          client: { input: ['/app/style.css'] },
+        }),
+      ],
     };
   } else {
     return {
