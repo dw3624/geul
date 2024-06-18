@@ -11,22 +11,30 @@ export default createRoute(async (c) => {
         {initial ? initial : '전체'}
       </h1>
       <article class="py-6 mt-12">
-        <div class="flex items-center justify-end text-sm text-muted-foreground">
-          <span>저서</span>
-        </div>
-        <div class="flex flex-col gap-6 mt-4">
-          {data.map((item) => (
-            <div
-              key={item.author.id}
-              class="flex items-baseline justify-between font-serif"
-            >
-              <div>
-                <a href={`/authors/${item.author.id}`}>{item.author.name}</a>
-              </div>
-              <div>{item.bookCount}</div>
+        {data ? (
+          <>
+            <div class="flex items-center justify-end text-sm text-muted-foreground">
+              <span>저서</span>
             </div>
-          ))}
-        </div>
+            <div class="flex flex-col gap-6 mt-4">
+              {data.map((item) => (
+                <div
+                  key={item.author.id}
+                  class="flex items-baseline justify-between font-serif"
+                >
+                  <div>
+                    <a href={`/authors/${item.author.id}`}>
+                      {item.author.name}
+                    </a>
+                  </div>
+                  <div>{item.bookCount}</div>
+                </div>
+              ))}
+            </div>
+          </>
+        ) : (
+          <div>등록된 저자가 없습니다.</div>
+        )}
       </article>
     </section>
   );

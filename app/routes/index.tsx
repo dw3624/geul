@@ -3,7 +3,7 @@ import { CHAR_LIST } from '../lib/const';
 
 export default createRoute((c) => {
   return c.render(
-    <div class="grid grid-cols-2 gap-6 mt-6 py-8 lg:py-10 font-serif">
+    <div class="grid grid-cols-1 gap-6 mt-6 py-8 lg:py-10 font-serif">
       <article>
         <h2 class="text-xl font-semibold">작품 찾기</h2>
         <div class="flex flex-col gap-12 mt-6">
@@ -21,9 +21,13 @@ export default createRoute((c) => {
                   </a>
                 ))}
               </div>
-              <div class="flex mt-4">
-                <a href="/authors">전체</a>
-                <a href="/authors?initial=etc">기타</a>
+              <div class="flex mt-4 gap-4 px-4">
+                <a href="/authors" class={' hover:underline'}>
+                  전체
+                </a>
+                <a href="/authors?initial=etc" class={'hover:underline'}>
+                  기타
+                </a>
               </div>
             </div>
           </section>
@@ -41,9 +45,13 @@ export default createRoute((c) => {
                   </a>
                 ))}
               </div>
-              <div class="flex mt-4">
-                <a href={'/books'}>전체</a>
-                <a href={'/books?initial=etc'}>기타</a>
+              <div class="flex mt-4 gap-4 px-4">
+                <a href={'/books'} class={' hover:underline'}>
+                  전체
+                </a>
+                <a href={'/books?initial=etc'} class=" hover:underline">
+                  기타
+                </a>
               </div>
             </div>
           </section>

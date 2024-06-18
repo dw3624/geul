@@ -18,6 +18,9 @@ export const findAllAuthors = async (d1: D1Database, initial?: string) => {
     })
     .from(author)
     .where(initial ? eq(author.initial, initial) : undefined);
+  if (result.length === 1 && !result[0].author.id) {
+    return null;
+  }
   return result;
 };
 
