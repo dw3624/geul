@@ -1,3 +1,10 @@
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+
 export const getInitialConsonant = (word: string) => {
   // 유니코드 한글 범위 내에서만 동작
   if (word.length === 0) return '';

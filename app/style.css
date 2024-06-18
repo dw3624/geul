@@ -59,4 +59,66 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .prose {
+    font-family: 'Noto Serif KR Variable';
+    line-height: 2.25rem;
+  }
+  .prose h1 {
+    @apply mt-2 scroll-m-20 text-4xl font-bold tracking-tight;
+  }
+  .prose h2 {
+    @apply mt-10 scroll-m-20 border-b pb-1 text-2xl md:text-3xl font-semibold tracking-tight first:mt-0;
+  }
+  .prose h3 {
+    @apply mt-8 scroll-m-20 text-xl md:text-2xl font-semibold tracking-tight;
+  }
+  .prose h4 {
+    @apply mt-8 scroll-m-20 text-lg md:text-xl font-semibold tracking-tight;
+  }
+  .prose h5 {
+    @apply mt-8 scroll-m-20 text-lg font-semibold tracking-tight;
+  }
+  .prose h6 {
+    @apply mt-8 scroll-m-20 text-base font-semibold tracking-tight;
+  }
+  .prose a {
+    @apply font-medium hover:underline underline-offset-4 text-primary hover:text-primary/80;
+  }
+  .prose p {
+    @apply leading-9 [&:not(:first-child)]:mt-6;
+  }
+  .prose ul {
+    @apply mt-4 mb-6 ml-6 list-disc;
+  }
+  .prose ol {
+    @apply mt-6 mb-6  ml-6 list-decimal;
+  }
+  .prose li {
+    @apply mt-2;
+  }
+  .prose blockquote {
+    @apply mt-6 border-l-2 pl-6 italic [&>*]:text-muted-foreground break-words;
+  }
+  .prose hr {
+    @apply my-4 md:my-8;
+  }
+  .prose table {
+    @apply my-6 w-full overflow-y-auto;
+  }
+  .prose tr {
+    @apply m-0 border-t p-0 even:bg-muted;
+  }
+  .prose th {
+    @apply border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right;
+  }
+  .prose td {
+    @apply border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right;
+  }
+  .prose pre {
+    @apply mb-4 mt-1 overflow-x-auto rounded-lg border bg-black py-4;
+  }
+  .prose code {
+    @apply relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm bg-primary/20;
+  }
 }

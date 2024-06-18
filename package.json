@@ -15,6 +15,7 @@
     "drizzle-orm": "^0.31.2",
     "hono": "^4.4.5",
     "honox": "^0.1.21",
+    "marked": "^13.0.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
@@ -22,8 +23,10 @@
     "@hono/vite-cloudflare-pages": "^0.4.0",
     "@hono/vite-dev-server": "^0.12.1",
     "autoprefixer": "^10.4.19",
+    "clsx": "^2.1.1",
     "drizzle-kit": "^0.22.7",
     "postcss": "^8.4.38",
+    "tailwind-merge": "^2.3.0",
     "tailwindcss": "^3.4.4",
     "tailwindcss-animate": "^1.0.7",
     "vite": "^5.2.12",

@@ -7,7 +7,7 @@ type Head = {
 type CreateAuthor = {
   id?: number;
   name: string;
-  initial?: string;
+  initial: string;
   birth?: string;
   death?: string;
 };
@@ -15,7 +15,7 @@ type CreateAuthor = {
 type CreateBook = {
   id?: number;
   title: string;
-  initial?: string;
+  initial: string;
   authorId?: number;
   translator?: string;
   country?: string;
@@ -27,6 +27,7 @@ type CreateBook = {
 
 declare module 'hono' {
   interface Env {
+    // biome-ignore lint/complexity/noBannedTypes: <explanation>
     Variables: {};
     Bindings: {
       D1: D1Database;
@@ -34,6 +35,7 @@ declare module 'hono' {
     };
   }
   interface ContextRenderer {
+    // biome-ignore lint/style/useShorthandFunctionType: <explanation>
     (content: string | Promise<string>, head?: Head):
       | Response
       | Promise<Response>;

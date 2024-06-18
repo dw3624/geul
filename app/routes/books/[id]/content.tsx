@@ -1,19 +1,29 @@
 import { createRoute } from 'honox/factory';
-import { findBookById, findContent } from '../../../db';
+import { findBookById, findContent, updateBookById } from '../../../db';
+import { marked } from 'marked';
 
 export default createRoute(async (c) => {
   const { id } = c.req.param();
   const { book, author } = await findBookById(c.env.D1, +id);
-  console.log(author);
   const path = `${author.name}_${book.title?.replaceAll(' ', '')}`;
-  console.log(path);
-  const content = await findContent(c.env.R2, path);
-  console.log(content);
+  const content = (await findContent(c.env.R2, path)) || '';
+  const html = await marked(content, { breaks: true });
+  const view = await updateBookById(c.env.D1, +id);
 
   return c.render(
-    <section class="py-8 lg:py-10">
-      {book.title}
-      <div>{content}</div>
+    <section class="py-10 lg:py-10 space-y-12">
+      <header class="text-center font-serif">
+        <div class="text-3xl font-bold leading-9">{book.title}</div>
+        <div class="mt-8 text-lg font-semibold">{author?.name}</div>
+      </header>
+      <div class="pt-8 pb-80">
+        <article
+          id="prose"
+          class="prose"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+      </div>
     </section>
   );
 });
