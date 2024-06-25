@@ -29,7 +29,7 @@ export default createRoute(async (c) => {
   return c.render(
     <section className="py-8 lg:py-10">
       <div>
-        <h1 className="scroll-m-20 text-4xl font-bold tracking-tight font-serif">
+        <h1 className="scroll-m-20 text-3xl font-bold tracking-tight font-serif">
           {book.title}
         </h1>
         <p className="mt-4">{author?.name}</p>
@@ -38,7 +38,7 @@ export default createRoute(async (c) => {
       <div className="flex flex-col gap-16 py-6 mt-12">
         {descriptions.map((desc) => (
           <div key={desc.title}>
-            <h2 className="font-semibold">| {desc.title} |</h2>
+            <h2 className="font-semibold">{desc.title}</h2>
             <div className="flex flex-col gap-2 mt-4">
               {desc.contents.map(
                 (content) =>
@@ -55,9 +55,14 @@ export default createRoute(async (c) => {
           </div>
         ))}
         <div>
-          <h2 className="font-semibold">| 작품 열람 및 내려받기 |</h2>
+          <h2 className="font-semibold">작품 열람 및 내려받기</h2>
           <div className="flex flex-col gap-2 mt-4">
-            <a href={`/books/${book.id}/content`} className="w-[120px] mr-2">
+            <a
+              href={`/books/${book.id}/content`}
+              target="_blank"
+              rel="noreferrer"
+              className="w-[120px] mr-2"
+            >
               HTML
             </a>
             <div className="w-[120px] mr-2">텍스트</div>

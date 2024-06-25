@@ -10,7 +10,7 @@ export default createRoute(async (c) => {
       <h1 class="text-4xl font-bold font-serif">
         {initial ? initial : '전체'}
       </h1>
-      <article class="py-6 mt-12">
+      <article class="py-6 mt-4">
         {data ? (
           <>
             <div class="flex items-center justify-end text-sm text-muted-foreground">

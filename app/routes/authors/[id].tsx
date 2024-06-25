@@ -12,12 +12,12 @@ export default createRoute(async (c) => {
 
   return c.render(
     <section class="py-8 lg:py-10">
-      <h1 class="scroll-m-20 text-4xl font-bold tracking-tight font-serif">
+      <h1 class="scroll-m-20 text-3xl font-bold tracking-tight font-serif">
         {author.name}
       </h1>
       <div class="flex flex-col gap-16 py-6 mt-12">
         <div>
-          <h2 class="font-semibold">| 기본 정보 |</h2>
+          <h2 class="font-semibold">기본 정보</h2>
           <div class="flex flex-col gap-2 mt-4">
             <div class="grid grid-cols-3 gap-2">
               <div class="col-span-1">출생</div>
@@ -30,7 +30,7 @@ export default createRoute(async (c) => {
           </div>
         </div>
         <div class="">
-          <h2 class="font-semibold">| 작품 목록 |</h2>
+          <h2 class="font-semibold">작품 목록</h2>
           <div class="flex flex-col gap-12 mt-4">
             {novels.length > 0 && (
               <div>

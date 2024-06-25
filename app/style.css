@@ -59,6 +59,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  body {
+    font-display: block;
+  }
 
   .prose {
     font-family: 'Noto Serif KR Variable';
